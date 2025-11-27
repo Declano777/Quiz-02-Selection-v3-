@@ -349,7 +349,7 @@
             // 
             // bonusButton
             // 
-            bonusButton.Location = new Point(89, 553);
+            bonusButton.Location = new Point(99, 553);
             bonusButton.Name = "bonusButton";
             bonusButton.Size = new Size(205, 60);
             bonusButton.TabIndex = 36;
