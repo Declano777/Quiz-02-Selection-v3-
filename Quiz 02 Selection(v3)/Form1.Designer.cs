@@ -47,7 +47,6 @@
             label11 = new Label();
             label9 = new Label();
             label12 = new Label();
-            label13 = new Label();
             q3OutputLabel = new Label();
             q3Button = new Button();
             q3TextBox = new TextBox();
@@ -69,7 +68,7 @@
             // 
             // label1
             // 
-            label1.Font = new Font("Consolas", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Consolas", 15.75F);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.Size = new Size(294, 28);
@@ -86,9 +85,9 @@
             // 
             // label3
             // 
-            label3.Location = new Point(0, 69);
+            label3.Location = new Point(0, 78);
             label3.Name = "label3";
-            label3.Size = new Size(405, 88);
+            label3.Size = new Size(405, 166);
             label3.TabIndex = 2;
             label3.Text = "The user is asked the last name of Canada’s prime minister.  If they correctly enter ‘Carney’ then output ‘CORRECT’ in q1OutputLabel.";
             // 
@@ -120,7 +119,7 @@
             // 
             q1TextBox.Location = new Point(168, 189);
             q1TextBox.Name = "q1TextBox";
-            q1TextBox.Size = new Size(100, 26);
+            q1TextBox.Size = new Size(100, 31);
             q1TextBox.TabIndex = 6;
             // 
             // q1Button
@@ -131,6 +130,7 @@
             q1Button.TabIndex = 7;
             q1Button.Text = "Code Me!";
             q1Button.UseVisualStyleBackColor = true;
+            q1Button.Click += q1Button_Click;
             // 
             // q1OutputLabel
             // 
@@ -150,9 +150,9 @@
             // 
             // label8
             // 
-            label8.Location = new Point(0, 318);
+            label8.Location = new Point(12, 310);
             label8.Name = "label8";
-            label8.Size = new Size(405, 88);
+            label8.Size = new Size(405, 161);
             label8.TabIndex = 10;
             label8.Text = "The user is asked if they like the Toronto Maple Leafs (y/n).  If they say yes, the output should be “Go Leafs Go!”.  If they say no (n), the output should be ‘BOOOOO!’";
             // 
@@ -172,12 +172,13 @@
             q2Button.TabIndex = 14;
             q2Button.Text = "Code Me!";
             q2Button.UseVisualStyleBackColor = true;
+            q2Button.Click += q2Button_Click;
             // 
             // q2TextBox
             // 
             q2TextBox.Location = new Point(168, 448);
             q2TextBox.Name = "q2TextBox";
-            q2TextBox.Size = new Size(100, 26);
+            q2TextBox.Size = new Size(100, 31);
             q2TextBox.TabIndex = 13;
             // 
             // label10
@@ -206,20 +207,11 @@
             // 
             // label12
             // 
-            label12.Location = new Point(447, 24);
+            label12.Location = new Point(447, 42);
             label12.Name = "label12";
-            label12.Size = new Size(637, 123);
+            label12.Size = new Size(637, 166);
             label12.TabIndex = 17;
             label12.Text = resources.GetString("label12.Text");
-            // 
-            // label13
-            // 
-            label13.ForeColor = Color.Yellow;
-            label13.Location = new Point(555, 122);
-            label13.Name = "label13";
-            label13.Size = new Size(637, 52);
-            label13.TabIndex = 18;
-            label13.Text = "Criteria:  ICS3U - use a switch structure, ICS3C - can choose multiple if's or switch";
             // 
             // q3OutputLabel
             // 
@@ -237,12 +229,13 @@
             q3Button.TabIndex = 22;
             q3Button.Text = "Code Me!";
             q3Button.UseVisualStyleBackColor = true;
+            q3Button.Click += q3Button_Click;
             // 
             // q3TextBox
             // 
             q3TextBox.Location = new Point(679, 188);
             q3TextBox.Name = "q3TextBox";
-            q3TextBox.Size = new Size(100, 26);
+            q3TextBox.Size = new Size(100, 31);
             q3TextBox.TabIndex = 21;
             // 
             // label15
@@ -271,9 +264,9 @@
             // 
             // label17
             // 
-            label17.Location = new Point(447, 318);
+            label17.Location = new Point(447, 267);
             label17.Name = "label17";
-            label17.Size = new Size(637, 104);
+            label17.Size = new Size(637, 141);
             label17.TabIndex = 25;
             label17.Text = resources.GetString("label17.Text");
             // 
@@ -289,7 +282,7 @@
             // 
             ageTextBox.Location = new Point(774, 440);
             ageTextBox.Name = "ageTextBox";
-            ageTextBox.Size = new Size(100, 26);
+            ageTextBox.Size = new Size(100, 31);
             ageTextBox.TabIndex = 27;
             // 
             // q4Button
@@ -300,6 +293,7 @@
             q4Button.TabIndex = 28;
             q4Button.Text = "Code Me!";
             q4Button.UseVisualStyleBackColor = true;
+            q4Button.Click += q4Button_Click;
             // 
             // parentTextBox
             // 
@@ -321,14 +315,14 @@
             // 
             textBox2.Location = new Point(774, 480);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 26);
+            textBox2.Size = new Size(100, 31);
             textBox2.TabIndex = 31;
             // 
             // timeTextBox
             // 
             timeTextBox.Location = new Point(774, 515);
             timeTextBox.Name = "timeTextBox";
-            timeTextBox.Size = new Size(100, 26);
+            timeTextBox.Size = new Size(100, 31);
             timeTextBox.TabIndex = 32;
             // 
             // label21
@@ -359,7 +353,7 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(9F, 19F);
+            AutoScaleDimensions = new SizeF(11F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1135, 802);
@@ -380,7 +374,6 @@
             Controls.Add(q3TextBox);
             Controls.Add(label15);
             Controls.Add(label16);
-            Controls.Add(label13);
             Controls.Add(label12);
             Controls.Add(label9);
             Controls.Add(q2OutputLabel);
@@ -399,7 +392,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Font = new Font("Consolas", 12F);
             Margin = new Padding(4);
             Name = "Form1";
             Text = "Quiz 02 - V3";
@@ -427,7 +420,6 @@
         private Label label11;
         private Label label9;
         private Label label12;
-        private Label label13;
         private Label q3OutputLabel;
         private Button q3Button;
         private TextBox q3TextBox;
